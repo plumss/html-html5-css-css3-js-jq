@@ -1,0 +1,45 @@
+@charset "utf-8";
+/*clear all*/
+
+html,body {font-size-adjust:none; font-stretch:normal; font-style:normal; font-variant:normal; font-weight:normal;text-align:left; font-family:"微软雅黑"; color:#404040; height:100%;width:100%;}
+html, body, div, ul, li, ol, dl, dd, h1, h2, h3, h4, h5, h6, p, form, fieldset, legend, input, textarea, select, button, th, td, span,* { margin:0; padding:0;}
+h1, h2, h3, h4, h5, h6 { font-size:100%; font-weight:normal;}
+table { border-collapse: collapse; border-spacing: 0; margin:0px; padding:0px;}
+input, select {font-family:Arial, Helvetica, sans-serif; font-size-adjust:none; font-stretch:normal; font-style:normal; font-variant:normal; font-weight:normal; line-height:normal;}
+button { overflow:visible;}
+th, em, strong, b, address, cite { font-style:normal; font-weight:normal;}
+ul { list-style:none;}
+li { list-style-image:none; list-style-position:outside; list-style-type:none; vertical-align:bottom;/*IE6*/}
+img, fieldset { border:0 none;}
+dd{ list-style:none; list-style-image:none; list-style-position:outside; list-style-type:none; vertical-align:bottom;}
+p{ text-indent:0em;}
+strong{ font-weight:bold;}
+a,a:link,a:visited{text-decoration:none;} 
+a:hover{text-decoration:none;}
+.clear{clear:both; font:0px Arial; height:0px;}
+#ie6-warning{ background:#FFF;}
+#ie6-warning a{ color:#090;}
+#ie6-warning a:hover{ color:#F00;}
+html,body{width:100%; height:100%;margin: 0;padding: 0;}
+
+
+/*css Document 清零*/
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,div
+dl,dt,dd,input{margin: 0;padding: 0;}
+body{font-size: 12px;}
+img{border: none;}
+li{list-style: none;}
+input,select,textarea{outline: none;border: none;background: none;}
+textarea{resize: none;}
+a{text-decoration: none; color: #656565;}
+a,button,input{-webkit-tap-highlight-color:rgba(255,0,0,0)outline: none;
+}
+/*清除浮动*/
+.clearfix:after{content: "";display: block; clear: both;   visibility: hidden;height: 0;}
+.clearfix{*zoom: 1;}
+.fl{float: left;}
+.fr{float: right;}
+.hide{display:none;}
+.show{display: block;}
+a:focus{outline:none;}
+input:focus{outline:none;outline-color: inherit}
