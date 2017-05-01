@@ -1,0 +1,114 @@
+@charset "utf-8";
+/*header*/
+header{width:100%;height: 1.51rem;position: fixed;top: 0;z-index: 990;}
+.header_tit{height:1.5rem;font-family: "微软雅黑";color:#000;text-align:center;background:#fff;line-height: 1.5rem;font-size:0.54rem;border-bottom: 1px solid #C8C8C8;}
+.header_left{position: absolute;left:0.10rem;outline: none;width: 1.8rem;}
+.header_right{position: absolute;right: 0.3rem;outline: none;}
+.header_left i,.header_right i{font-size: 0.54rem;color:#999;cursor: pointer;}
+
+
+/*popup*/
+.popup{display:none;width: 9.35rem;height:6.5rem;border: 1px solid #EFEFF4;z-index: 1002;position: absolute;top: 5.27rem;left: 1.6rem;background: #FFFFFF;border-radius: 0.15rem;}
+.popup h3{height:1.5rem;line-height:1.5rem;width: 9.35rem;border-bottom: 1px solid #c4c4c4;text-align: center;font-size: 0.62rem;font-weight: normal;}
+.popup .remindsss p{height: 2.40rem;line-height:2.4rem;font-size: 0.5rem;padding-bottom: 0.20rem;text-align: center;}
+.popup .requireRemin .showMess{width: 90%;margin-left:5%;height: 2.4rem;margin-bottom: 0.5rem;} 
+.popup .requireRemin .showMess p{line-height:1.0rem;}
+.popup .remindsss  .cancel{margin-top:-0.5rem;font-size:0.50rem;float:left;width:3.99rem;height:1.3rem;line-height:1.3rem;display: block;border: 1px solid #999999;border-radius:0.1rem;margin-left: 0.50rem;text-align: center;color: #000000;}
+.popup .remindsss .sure{margin-top:-0.5rem;font-size:0.50rem;float:left;width: 3.99rem;height: 1.3rem;line-height:1.3rem;display: block;margin-left: 0.50rem;text-align: center;border-radius:0.1rem;background: #ff8b00;color: #FFFFFF;}
+.popup .oneSureBtn{
+	margin-top:-0.5rem;font-size:0.50rem;float:left;width: 3.99rem;height: 1.3rem;line-height:1.3rem;display: block;margin-left:28%;text-align: center;border-radius:0.1rem;background: #F16622;color: #FFFFFF;
+}
+/*popup01*/
+.popup01{display:none;position: absolute;width: 9.35rem;height:6.5rem;border: 1px solid #EFEFF4;z-index: 1002;top: 5.27rem;left: 1.6rem;background: #FFFFFF;border-radius: 0.15rem;}
+.popup01 h3{height:1.5rem;line-height:1.5rem;width: 9.35rem;border-bottom: 1px solid #F2F2F2;text-align: center;font-size: 0.62rem;font-weight: normal;}
+.popup01 .remindsss ol{text-align: center;margin-left:0.6rem;margin-top: 0.4rem;}
+.popup01 .remindsss ol li{float: left;padding-left: 0.5rem;}
+.popup01 .remindsss ol li .checkedIcon{color: #E98F36;}
+.popup01 .remindsss ol li .notcheckedIcon{color: #DBDBDB;}
+.popup01 .remindsss ol li .qiIcon i{font-size: 1.0rem;}
+.popup01 .remindsss p{clear: both;text-align: center;font-size: 0.4rem;color:#D96A33;height: 1.0rem;line-height: 1.0rem;}
+.popup01 .remindsss .knowBtn{width:3.3rem;text-align: center;display: block;height: 1.0rem;line-height: 1.0rem;background: #D96A33;color: #FFFFFF;font-size: 0.5rem;border-radius: 0.15rem;margin-left: 34%;}
+/*评价商家弹框*/
+.poppup02,.poppup03{display:none;position: fixed;width: 100%;height:10.0rem;border: 1px solid #EFEFF4;z-index: 1002;left: 0;background: #FFFFFF;border-radius: 0.15rem;bottom: 0;}
+.poppup02 .headPop,.poppup03 .headPop,.alreadyPoppup04 .headPop{height: 1.5rem;line-height: 1.5rem;border: 1px solid #EFEFF4;}
+.poppup02 .headPop .closePop02,.poppup03 .headPop .closePop03,.alreadyPoppup04 .headPop .closePop04{display: block;float: left;margin-left: 0.3rem;}
+.poppup02 .headPop h3,.poppup03 .headPop h3,.alreadyPoppup04 .headPop h3{width:90%;font-weight: normal;font-size: 0.5rem;display: block;float: left;text-align: center;}
+.poppup02 .centerPop,.poppup03 .centerPop{clear:both;height: 3.0rem;border-bottom: 1px solid #EFEFF4;}
+.poppup02 .centerPop ol,.poppup03 .centerPop ol{text-align: center;margin-left:19%;margin-top: 0.6rem;}
+.poppup02 .centerPop ol li,.poppup03 .centerPop ol li{float: left;padding-left: 0.5rem;}
+.poppup02 .centerPop ol li .checkedIcon,.poppup03 .centerPop ol li .checkedIcon{color: #E98F36;}
+.poppup02 .centerPop ol li .notcheckedIcon,.poppup03 .centerPop ol li .notcheckedIcon{color: #DBDBDB;}
+.poppup02 .centerPop ol li .qiIcon i,.poppup03 .centerPop ol li .qiIcon i{font-size: 1.0rem;}
+.poppup02 .centerPop p{clear: both;font-size: 0.5rem;color:#AEAEAE;width: 100%;text-align: center;height: 1.0rem;line-height: 1.0rem;}
+.poppup02 .bottomPop h3{font-weight: normal;font-size: 0.5rem;color: #AEAEAE;width: 100%;text-align: center;height: 1.5rem;line-height: 1.5rem;}
+.poppup02 .bottomPop ol{width:7.0rem;height: 3.0rem;margin-left: 21%;}
+.poppup02 .bottomPop ol li{margin-right: 0.5rem;float: left;height: 1.0rem;}
+.poppup02 .bottomPop ol li a{font-size: 0.5rem;color: #AEAEAE;}
+/*poppup03*/
+.poppup03{height:13.5rem;}
+.poppup03 .centerPop{height: auto;border: none;}
+.poppup03 .centerPop p{clear: both;font-size: 0.5rem;height: 0.6rem;width: 100%;text-align: center;color: #AEAEAE;}
+.poppup03 .centerPop .notP{line-height: 0.9rem;}
+.poppup03 .centerPop .notP span{color: #D96A33;}
+.poppup03 .bottomPop ol{width:12.0rem;height: 3.0rem;margin-left: 15%;}
+.poppup03 .bottomPop ol li{width:4.0rem;margin-right: 0.5rem;float: left;height: 1.0rem;line-height:0.5rem;text-align:center;margin-bottom: 0.5rem;color: #AEAEAE;}
+.poppup03 .bottomPop ol li a{font-size: 0.4rem;display: block;width:4.0rem;border: 1px solid #E4E4E4;color:#949494;height: 1.0rem;line-height:1.0rem;}
+.poppup03 .bottomPop ol li .activeLi{border: 1px solid #D96A33;background: #FFF6F2;color:#D96A33 ;}
+.poppup03 .bottomPop .otherInput{outline:none;width: 67%;height:1.0rem;margin-left: 15%;border:none;background: #F3F4F5;border-radius: 0.15rem;padding-left: 0.3rem;}
+.poppup03 .bottomPop .textArea{display:none;width: 66%;
+    height: 2.2rem;
+    margin-left: 15%;
+    font-size: 0.48rem;
+    padding-left: 0.3rem;
+    padding-top: 0.35rem;
+    background: #f3f4f5;border:none;border: 1px solid #cfcfcf;outline: none;
+    margin-top: 0.6rem;}
+.poppup03 .bottomPop .textArea::-webkit-input-placeholder { /* WebKit browsers */ 
+	color:#CCCCCC;	 
+} 
+.poppup03 .bottomPop .digital {
+	display:none;
+    position: absolute;
+    bottom: 2.2rem;
+    right: 2.3rem;
+    font-size: 0.42rem;color: #cccccc;}
+.poppup03 .bottomPop  label{position: absolute;font-size: 0.4rem;margin-top: 2.5rem;margin-left: -1.0rem;color: #cccccc;}
+.poppup03 .niNameBtn{display: block;width: 96%;margin-left: 2%;height: 1.2rem;line-height: 1.2rem;text-align: center;background: #CCCCCC;color: #FFFFFF;border-radius: 0.15rem;font-size: 0.5rem;margin-top: 0.5rem;outline: none;border: none;cursor: not-allowed;}
+.poppup03 .niNameBtnActive{background: #E98F36;cursor: pointer;}
+/*alreadyPoppup04*/
+.alreadyPoppup04{display:none;position: fixed;width: 100%;height:5.0rem;border: 1px solid #EFEFF4;z-index: 1002;left: 0;background: #FFFFFF;border-radius: 0.15rem;bottom: 0;}
+.alreadyPoppup04 .centerPop{width: 100%;text-align: center;}
+.alreadyPoppup04 .centerPop a{display:block;margin-top: 0.3rem;}
+.alreadyPoppup04 .centerPop p{margin-top:-0.1rem;font-size: 0.5rem;color: #6B6B6B;}
+/*showMapPop*/
+.showMapPop{display:none;position:fixed;top:30%;left:15%;width: 70%;height: 8.0rem;background: #FFFFFF;z-index: 1002;border-radius: 0.15rem;}
+.showMapPop .showMapList li{height: 1.5rem;line-height: 1.5rem;text-align: center;font-size: 0.5rem;color: #5CA2EC;}
+.showMapPop .showMapList .firstLi{background: #F3F6FB;font-size: 0.6rem;color: #53565B;}
+.showMapPop .showMapList .simLi{border-bottom: 1px solid #E0E0E0;}
+/*商量价格*/
+.popupPrice{display:none;position: absolute;width: 9.35rem;height:5.5rem;border: 1px solid #EFEFF4;z-index: 1002;top: 5.27rem;left: 1.6rem;background: #FFFFFF;border-radius: 0.15rem;}
+.popupPrice h3{height:1.5rem;line-height:1.5rem;width: 9.35rem;border-bottom: 1px solid #F2F2F2;text-align: center;font-size: 0.5rem;font-weight: normal;}
+.popupPrice .remindsss{width: 100%;height: 2.0rem;line-height:2.0rem;}
+.popupPrice .remindsss input{float: left;height: 1.0rem;line-height: 1.0rem;margin-top: 0.5rem;width: 3.5rem;text-align: center;font-size: 0.5rem;margin-left: 10%;border: 1px solid #F2F2F2;outline: none;}
+.popupPrice .remindsss input::-webkit-input-placeholder { /* WebKit browsers */ 
+color:#000; 
+} 
+.popupPrice .remindsss span{font-size: 0.5rem;display: block;float: left;margin-left: 0.8rem;}
+.popupPrice .btn{width: 100%;height: 3.0rem;margin-top: 0.3rem;}
+.popupPrice .btn .simBtn{width: 40%;height: 1.0rem;line-height: 1.0rem;text-align: center;display: block;float:left;font-size: 0.4rem;border-radius: 0.15rem;}
+.popupPrice .btn .cancel{border: 1px solid #D0D0D0;margin-left: 3%;}
+.popupPrice .btn .sure{background: #F16622;color: #FFFFFF;margin-left: 10%;}
+/*black*/
+.black_overlay{
+     display: none; 
+     position: fixed;  
+     top: 0%;  
+     left: 0%;  
+     width: 100%;  
+     height: 100%;  
+     background-color: black;  
+     z-index:1001;  
+     -moz-opacity: 0.5;  
+     opacity:.50;  
+     filter: alpha(opacity=50);  
+} 
