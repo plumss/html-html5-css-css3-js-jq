@@ -1,0 +1,929 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>微信端tab切换加上拉刷新下拉加载</title>
+<!--<link rel="stylesheet" href="css/idangerous.swiper.css">-->
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+<link rel="stylesheet" type="text/css" href="css/commom.css"/>
+<link rel="stylesheet" type="text/css" href="css/index.css"/>
+<link rel="stylesheet" type="text/css" href="iconfont/iconfont.css"/>
+
+</head>
+<body>
+	<header>			
+				<div class="header_tit">
+					<a class="header_left" href="#" onClick="javascript :history.back(-1);"><i class="iconfont icon-fanhui" style="font-size: 1em;color:#BFBFBF;"></i></a>
+					<a class="header_center simA headerAcitive" href="#">需求订单</a>
+					<a class="header_right01 simA" href="#">购物订单</a>
+				</div>	
+				<ul class="showTab showTab01" style="display: block;">
+				  		<li><a href="#" class="activeAs">待接单</a></li>
+				  		<li><a href="#">已接单</a></li>
+				  		<li><a href="#">已完成</a></li>
+				</ul>
+				<ul class="showTab showTab02" style="display: none;">
+				  		<li><a href="#" class="activeAs">待确定</a></li>
+				  		<li><a href="#">已接单</a></li>
+				  		<li><a href="#">已完成</a></li>
+				</ul>
+	</header>
+	<div class="preloaderDown"><img src="img/refresh.gif" /> <span>下拉刷新...</span> </div>
+	<!--需求订单--待接单-->
+	<div class="swiper-container swiper-container01 main" style="clear: both;display: block;">
+				<div class="swiper-wrapper" style="position: relative;">
+					<div class="swiper-slide">
+						<ul class="orderList">
+							<li class="firstLi requireWaitOrder">
+								<span class="leftSpan">2017-02-10 15:30</span>
+								<span class="rightSpan">待接单&nbsp;<a class="rightIcon" href="#"><i class="iconfont icon-xiangyou" style="font-size: 0.5rem;color:#BFBFBF;"></i></a></span>
+							</li>
+							<li class="secondLi">
+								<ol class="showAdressOl">
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-qidian" style="font-size: 0.7rem;color:#00a05a;"></i></a>
+										<span class="rightSpan">中国中国中国中国</span>
+									</li>
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-zhongdian" style="font-size: 0.7rem;color:#e60032;"></i></a>
+										<span class="rightSpan">中国中国中国中国</span>
+									</li>
+								</ol>
+							</li>
+						</ul>
+					</div>  
+					<div class="swiper-slide">
+						<ul class="orderList">
+							<li class="firstLi requireWaitSure">
+								<span class="leftSpan">2017-02-10 15:30</span>
+								<span class="rightSpan">待确认&nbsp;<a class="rightIcon" href="#"><i class="iconfont icon-xiangyou" style="font-size: 0.5rem;color:#BFBFBF;"></i></a></span>
+							</li>
+							<li class="secondLi">
+								<ol class="showAdressOl">
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-qidian" style="font-size: 0.7rem;color:#00a05a;"></i></a>
+										<span class="rightSpan">中国中国中国中国</span>
+									</li>
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-zhongdian" style="font-size: 0.7rem;color:#e60032;"></i></a>
+										<span class="rightSpan">中国中国中国中国</span>
+									</li>
+								</ol>
+							</li>
+						</ul>
+					</div>  
+					<div class="preloaderUp preloaderUp01"><img src="img/refresh.gif" /> <span>上拉加载...</span> 					</div>
+				</div>
+	</div>
+	<!--需求订单--已接单-->
+	<div class="swiper-container swiper-container02 main" style="clear: both;display: none;">
+				<div class="swiper-wrapper" style="position: relative;">
+					<div class="swiper-slide">
+						<ul class="orderList">
+							<li class="firstLi requireNoPay">
+								<span class="leftSpan">2017-02-10 15:30</span>
+								<span class="rightSpan">未支付&nbsp;<a class="rightIcon" href="#"><i class="iconfont icon-xiangyou" style="font-size: 0.5rem;color:#BFBFBF;"></i></a></span>
+							</li>
+							<li class="secondLi">
+								<ol class="showAdressOl">
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-qidian" style="font-size: 0.7rem;color:#00a05a;"></i></a>
+										<span class="rightSpan">中国中国中国中国</span>
+									</li>
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-zhongdian" style="font-size: 0.7rem;color:#e60032;"></i></a>
+										<span class="rightSpan">中国中国中国中国</span>
+									</li>
+								</ol>
+							</li>
+							<li class="threeLi">
+								<div class="leftImg">
+									<img src="img/icon.jpg" />
+								</div>
+								<div class="centerContent">
+									<span>商家一&nbsp;&nbsp;<a class="iconX" href="#"><i class="iconfont icon-xingxing" style="font-size: 0.5rem;color:#fed10b;"></i>&nbsp;4.8</a><label>&nbsp;1698单</label></span>
+									<label class="showCarList">汽车配件、二手车</label>
+							
+								</div>
+								<a class="rightIcon" href="tel:15221317346"><i class="iconfont icon-telephone" style="font-size: 0.7rem;color:#666666;"></i></a>
+							</li>
+							<li class="orderId">
+								<span>订单编号：2017805963226<label class="color">-1</label></span>
+							</li>
+							<li class="secondLi">
+								<ol class="showAdressOl">
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-qidian" style="font-size: 0.7rem;color:#00a05a;"></i></a>
+										<span class="rightSpan">中国中国中国中国</span>
+									</li>
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-zhongdian" style="font-size: 0.7rem;color:#e60032;"></i></a>
+										<span class="rightSpan">中国中国中国中国</span>
+									</li>
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-jiage" style="font-size: 0.72rem;color:#f16622;"></i></a>
+										<span class="rightSpan">商家报价<label class="color">260元</label></span>
+									</li>
+								</ol>
+						    </li>
+							<li class="lastLi">
+									<span class="leftSpan">约<label>1086.1</label>公里</span>
+									<span class="rightSpan">查看路线<a class="rightIcon" href="#"><i class="iconfont icon-xiangyou" style="font-size: 0.5rem;color:#FFFFFF;"></i></a></span>
+							</li>
+						</ul>
+					</div>    
+					<div class="swiper-slide">
+						<ul class="orderList">
+							<li class="firstLi requirePay">
+								<span class="leftSpan">2017-02-10 15:30</span>
+								<span class="rightSpan">已支付&nbsp;<a class="rightIcon" href="#"><i class="iconfont icon-xiangyou" style="font-size: 0.5rem;color:#BFBFBF;"></i></a></span>
+							</li>
+							<li class="secondLi">
+								<ol class="showAdressOl">
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-qidian" style="font-size: 0.7rem;color:#00a05a;"></i></a>
+										<span class="rightSpan">中国中国中国中国</span>
+									</li>
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-zhongdian" style="font-size: 0.7rem;color:#e60032;"></i></a>
+										<span class="rightSpan">中国中国中国中国</span>
+									</li>
+								</ol>
+							</li>
+							<li class="threeLi">
+								<div class="leftImg">
+									<img src="img/icon.jpg" />
+								</div>
+								<div class="centerContent">
+									<span>商家一&nbsp;&nbsp;<a class="iconX" href="#"><i class="iconfont icon-xingxing" style="font-size: 0.5rem;color:#fed10b;"></i>&nbsp;4.8</a><label>&nbsp;1698单</label></span>
+									<label class="showCarList">汽车配件、二手车</label>
+							
+								</div>
+								<a class="rightIcon" href="tel:15221317346"><i class="iconfont icon-telephone" style="font-size: 0.7rem;color:#666666;"></i></a>
+							</li>
+							<li class="orderId">
+								<span>订单编号：2017805963226<label class="color">-1</label></span>
+							</li>
+							<li class="secondLi">
+								<ol class="showAdressOl">
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-qidian" style="font-size: 0.7rem;color:#00a05a;"></i></a>
+										<span class="rightSpan">中国中国中国中国</span>
+									</li>
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-zhongdian" style="font-size: 0.7rem;color:#e60032;"></i></a>
+										<span class="rightSpan">中国中国中国中国</span>
+									</li>
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-jiage" style="font-size: 0.72rem;color:#f16622;"></i></a>
+										<span class="rightSpan">商家报价<label class="color">260元</label></span>
+									</li>
+								</ol>
+						    </li>
+							<li class="lastLi">
+									<span class="leftSpan">约<label>1086.1</label>公里</span>
+									<span class="rightSpan">查看路线<a class="rightIcon" href="#"><i class="iconfont icon-xiangyou" style="font-size: 0.5rem;color:#FFFFFF;"></i></a></span>
+							</li>
+							<li class="aleadyPayLi">
+								<span>支付费用：<label class="color">￥260</label></span>
+								<a href="#" class="pickGoodBtn simButton">确认提货</a>
+							</li>
+						</ul>
+					</div>    
+					<div class="swiper-slide">
+						<ul class="orderList">
+							<li class="firstLi">
+								<span class="leftSpan">2017-02-10 15:30</span>
+								<span class="rightSpan">已配送&nbsp;<a class="rightIcon" href="#"><i class="iconfont icon-xiangyou" style="font-size: 0.5rem;color:#BFBFBF;"></i></a></span>
+							</li>
+							<li class="secondLi">
+								<ol class="showAdressOl">
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-qidian" style="font-size: 0.7rem;color:#00a05a;"></i></a>
+										<span class="rightSpan">中国中国中国中国</span>
+									</li>
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-zhongdian" style="font-size: 0.7rem;color:#e60032;"></i></a>
+										<span class="rightSpan">中国中国中国中国</span>
+									</li>
+								</ol>
+							</li>
+							<li class="threeLi">
+								<div class="leftImg">
+									<img src="img/icon.jpg" />
+								</div>
+								<div class="centerContent">
+									<span>商家一&nbsp;&nbsp;<a class="iconX" href="#"><i class="iconfont icon-xingxing" style="font-size: 0.5rem;color:#fed10b;"></i>&nbsp;4.8</a><label>&nbsp;1698单</label></span>
+									<label class="showCarList">汽车配件、二手车</label>
+							
+								</div>
+								<a class="rightIcon" href="tel:15221317346"><i class="iconfont icon-telephone" style="font-size: 0.7rem;color:#666666;"></i></a>
+							</li>
+							<li class="orderId">
+								<span>订单编号：2017805963226<label class="color">-1</label></span>
+							</li>
+							<li class="secondLi">
+								<ol class="showAdressOl">
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-qidian" style="font-size: 0.7rem;color:#00a05a;"></i></a>
+										<span class="rightSpan">中国中国中国中国</span>
+									</li>
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-zhongdian" style="font-size: 0.7rem;color:#e60032;"></i></a>
+										<span class="rightSpan">中国中国中国中国</span>
+									</li>
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-jiage" style="font-size: 0.72rem;color:#f16622;"></i></a>
+										<span class="rightSpan">商家报价<label class="color">260元</label></span>
+									</li>
+								</ol>
+						    </li>
+							<li class="lastLi">
+									<span class="leftSpan">约<label>1086.1</label>公里</span>
+									<span class="rightSpan">查看路线<a class="rightIcon" href="#"><i class="iconfont icon-xiangyou" style="font-size: 0.5rem;color:#FFFFFF;"></i></a></span>
+							</li>
+							<li class="aleadyPayLi">
+								<span>支付费用：<label class="color">￥260</label></span>
+								<a href="#" class="shouHuoBtn simButton">确认送达</a>
+							</li>
+						</ul>
+					</div>    
+					<div class="preloaderUp preloaderUp01"><img src="img/refresh.gif" /> <span>上拉加载...</span> 					</div>	
+				</div>
+	</div>
+	<!--需求订单--已完成-->
+	<div class="swiper-container swiper-container03 main" style="clear: both;display: none;">
+				<div class="swiper-wrapper" style="position: relative;">
+					<div class="swiper-slide">
+						<ul class="orderList">
+							<li class="firstLi">
+								<span class="leftSpan">2017-02-10 15:30</span>
+								<span class="rightSpan">已送达&nbsp;<a class="rightIcon" href="#"><i class="iconfont icon-xiangyou" style="font-size: 0.5rem;color:#BFBFBF;"></i></a></span>
+							</li>
+							<li class="secondLi">
+								<ol class="showAdressOl">
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-qidian" style="font-size: 0.7rem;color:#00a05a;"></i></a>
+										<span class="rightSpan">中国中国中国中国</span>
+									</li>
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-zhongdian" style="font-size: 0.7rem;color:#e60032;"></i></a>
+										<span class="rightSpan">中国中国中国中国</span>
+									</li>
+								</ol>
+							</li>
+							<li class="threeLi">
+								<div class="leftImg">
+									<img src="img/icon.jpg" />
+								</div>
+								<div class="centerContent">
+									<span>商家一&nbsp;&nbsp;<a class="iconX" href="#"><i class="iconfont icon-xingxing" style="font-size: 0.5rem;color:#fed10b;"></i>&nbsp;4.8</a><label>&nbsp;1698单</label></span>
+									<label class="showCarList">汽车配件、二手车</label>
+							
+								</div>
+								<a class="rightIcon" href="tel:15221317346"><i class="iconfont icon-telephone" style="font-size: 0.7rem;color:#666666;"></i></a>
+							</li>
+							<li class="orderId">
+								<span>订单编号：2017805963226<label class="color">-1</label></span>
+							</li>
+							<li class="secondLi">
+								<ol class="showAdressOl">
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-qidian" style="font-size: 0.7rem;color:#00a05a;"></i></a>
+										<span class="rightSpan">中国中国中国中国</span>
+									</li>
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-zhongdian" style="font-size: 0.7rem;color:#e60032;"></i></a>
+										<span class="rightSpan">中国中国中国中国</span>
+									</li>
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-jiage" style="font-size: 0.72rem;color:#f16622;"></i></a>
+										<span class="rightSpan">商家报价<label class="color">260元</label></span>
+									</li>
+								</ol>
+						   </li>
+						</ul>
+					</div>    
+					<div class="swiper-slide">
+						<ul class="orderList">
+							<li class="firstLi">
+								<span class="leftSpan">2017-02-10 15:30</span>
+								<span class="rightSpan">已完成&nbsp;<a class="rightIcon" href="#"><i class="iconfont icon-xiangyou" style="font-size: 0.5rem;color:#BFBFBF;"></i></a></span>
+							</li>
+							<li class="secondLi">
+								<ol class="showAdressOl">
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-qidian" style="font-size: 0.7rem;color:#00a05a;"></i></a>
+										<span class="rightSpan">中国中国中国中国</span>
+									</li>
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-zhongdian" style="font-size: 0.7rem;color:#e60032;"></i></a>
+										<span class="rightSpan">中国中国中国中国</span>
+									</li>
+								</ol>
+							</li>
+							<li class="threeLi">
+								<div class="leftImg">
+									<img src="img/icon.jpg" />
+								</div>
+								<div class="centerContent">
+									<span>商家一&nbsp;&nbsp;<a class="iconX" href="#"><i class="iconfont icon-xingxing" style="font-size: 0.5rem;color:#fed10b;"></i>&nbsp;4.8</a><label>&nbsp;1698单</label></span>
+									<label class="showCarList">汽车配件、二手车</label>
+							
+								</div>
+								<div class="rightContent">
+									<a class="smsIcon" href="tel:15221317346"><i class="iconfont icon-gantanhao" style="font-size: 0.6rem;color:#666666;"></i></a>
+									<a class="rightIcon" href="tel:15221317346"><i class="iconfont icon-telephone" style="font-size: 0.7rem;color:#666666;"></i></a>
+								</div>
+							</li>
+							<li class="orderId">
+								<span>订单编号：2017805963226<label class="color">-1</label></span>
+							</li>
+							<li class="secondLi">
+								<ol class="showAdressOl">
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-qidian" style="font-size: 0.7rem;color:#00a05a;"></i></a>
+										<span class="rightSpan">中国中国中国中国</span>
+									</li>
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-zhongdian" style="font-size: 0.7rem;color:#e60032;"></i></a>
+										<span class="rightSpan">中国中国中国中国</span>
+									</li>
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-jiage" style="font-size: 0.72rem;color:#f16622;"></i></a>
+										<span class="rightSpan">商家报价<label class="color">260元</label></span>
+									</li>
+								</ol>
+						   </li>
+							<li class="aleadyPayLi">
+								<span>支付费用：<label class="color">￥260</label></span>
+								<a href="#" class="merchantsBtn simButton">评价商家</a>
+							</li>
+						</ul>
+					</div>      
+					<div class="swiper-slide">
+						<ul class="orderList">
+							<li class="firstLi">
+								<span class="leftSpan">2017-02-10 15:30</span>
+								<span class="rightSpan">已完成&nbsp;<a class="rightIcon" href="#"><i class="iconfont icon-xiangyou" style="font-size: 0.5rem;color:#BFBFBF;"></i></a></span>
+							</li>
+							<li class="secondLi">
+								<ol class="showAdressOl">
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-qidian" style="font-size: 0.7rem;color:#00a05a;"></i></a>
+										<span class="rightSpan">中国中国中国中国</span>
+									</li>
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-zhongdian" style="font-size: 0.7rem;color:#e60032;"></i></a>
+										<span class="rightSpan">中国中国中国中国</span>
+									</li>
+								</ol>
+							</li>
+							<li class="threeLi">
+								<div class="leftImg">
+									<img src="img/icon.jpg" />
+								</div>
+								<div class="centerContent">
+									<span>商家一&nbsp;&nbsp;<a class="iconX" href="#"><i class="iconfont icon-xingxing" style="font-size: 0.5rem;color:#fed10b;"></i>&nbsp;4.8</a><label>&nbsp;1698单</label></span>
+									<label class="showCarList">汽车配件、二手车</label>
+							
+								</div>
+								<div class="rightContent">
+									<a class="smsIcon" href="tel:15221317346"><i class="iconfont icon-gantanhao" style="font-size: 0.6rem;color:#666666;"></i></a>
+									<a class="rightIcon" href="tel:15221317346"><i class="iconfont icon-telephone" style="font-size: 0.7rem;color:#666666;"></i></a>
+								</div>
+							</li>
+							<li class="orderId">
+								<span>订单编号：2017805963226<label class="color">-1</label></span>
+							</li>
+							<li class="secondLi">
+								<ol class="showAdressOl">
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-qidian" style="font-size: 0.7rem;color:#00a05a;"></i></a>
+										<span class="rightSpan">中国中国中国中国</span>
+									</li>
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-zhongdian" style="font-size: 0.7rem;color:#e60032;"></i></a>
+										<span class="rightSpan">中国中国中国中国</span>
+									</li>
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-jiage" style="font-size: 0.72rem;color:#f16622;"></i></a>
+										<span class="rightSpan">商家报价<label class="color">260元</label></span>
+									</li>
+								</ol>
+						   </li>
+							<li class="aleadyPayLi">
+								<span>支付费用：<label class="color">￥260</label></span>
+								<!--<a href="#" class="merchantsBtn simButton">评价商家</a>-->
+							</li>
+							<li class="evalLi">我对商家的评价</li>
+							<li class="evalListLi">
+								<ol>
+									<li><a class="starIcon" href="#"><i class="iconfont icon-pingfenwujiaoxing1 select" style="font-size: 0.8rem;"></i></a></li>
+									<li><a class="starIcon" href="#"><i class="iconfont icon-pingfenwujiaoxing1 select" style="font-size: 0.8rem;"></i></a></li>
+									<li><a class="starIcon" href="#"><i class="iconfont icon-pingfenwujiaoxing1 noSelect" style="font-size: 0.8rem;"></i></a></li>
+									<li><a class="starIcon" href="#"><i class="iconfont icon-pingfenwujiaoxing1 noSelect" style="font-size: 0.8rem;"></i></a></li>
+									<li><a class="starIcon" href="#"><i class="iconfont icon-pingfenwujiaoxing1 noSelect" style="font-size: 0.8rem;"></i></a></li>
+								</ol>
+							</li>
+						</ul>
+					</div>   
+					 <div class="swiper-slide">
+						<ul class="orderList">
+							<li class="firstLi requireCancle">
+								<span class="leftSpan">2017-02-10 15:30</span>
+								<span class="rightSpan">已取消&nbsp;<a class="rightIcon" href="#"><i class="iconfont icon-xiangyou" style="font-size: 0.5rem;color:#BFBFBF;"></i></a></span>
+							</li>
+							<li class="secondLi">
+								<ol class="showAdressOl">
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-qidian" style="font-size: 0.7rem;color:#00a05a;"></i></a>
+										<span class="rightSpan">中国中国中国中国</span>
+									</li>
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-zhongdian" style="font-size: 0.7rem;color:#e60032;"></i></a>
+										<span class="rightSpan">中国中国中国中国</span>
+									</li>
+								</ol>
+							</li>
+							<li class="threeLi">
+								<div class="leftImg">
+									<img src="img/icon.jpg" />
+								</div>
+								<div class="centerContent">
+									<span>商家一&nbsp;&nbsp;<a class="iconX" href="#"><i class="iconfont icon-xingxing" style="font-size: 0.5rem;color:#fed10b;"></i>&nbsp;4.8</a><label>&nbsp;1698单</label></span>
+									<label class="showCarList">汽车配件、二手车</label>
+							
+								</div>
+								<a class="rightIcon" href="tel:15221317346"><i class="iconfont icon-telephone" style="font-size: 0.7rem;color:#666666;"></i></a>
+							</li>
+							<li class="orderId">
+								<span>订单编号：2017805963226<label class="color">-1</label></span>
+							</li>
+							<li class="secondLi">
+								<ol class="showAdressOl">
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-qidian" style="font-size: 0.7rem;color:#00a05a;"></i></a>
+										<span class="rightSpan">中国中国中国中国</span>
+									</li>
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-zhongdian" style="font-size: 0.7rem;color:#e60032;"></i></a>
+										<span class="rightSpan">中国中国中国中国</span>
+									</li>
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-jiage" style="font-size: 0.72rem;color:#f16622;"></i></a>
+										<span class="rightSpan">商家报价<label class="color">260元</label></span>
+									</li>
+								</ol>
+						   </li>
+						</ul>
+					</div>   
+					<div class="preloaderUp preloaderUp01"><img src="img/refresh.gif" /> <span>上拉加载...</span> </div>	
+				</div>
+			</div>
+	<!--拼货订单--待确认-->
+	<div class="swiper-container swiper-container04 main01" style="clear: both;display: none;">
+				<div class="swiper-wrapper" style="position: relative;">
+					<div class="swiper-slide">
+						<ul class="orderList">
+							<li class="firstLi waitSure">
+								<span class="leftSpan">2017-02-10 15:30</span>
+								<span class="rightSpan">待确认&nbsp;<a class="rightIcon" href="#"><i class="iconfont icon-xiangyou" style="font-size: 0.5rem;color:#BFBFBF;"></i></a></span>
+							</li>
+							<li class="threeLi">
+								<div class="leftImg">
+									<img src="img/icon.jpg" />
+								</div>
+								<div class="centerContent">
+									<span>商家一&nbsp;&nbsp;<a class="iconX" href="#"><i class="iconfont icon-xingxing" style="font-size: 0.5rem;color:#fed10b;"></i>&nbsp;4.8</a><label>&nbsp;1698单</label></span>
+									<label class="showCarList">汽车配件、二手车</label>
+							
+								</div>
+								<a class="rightIcon" href="tel:15221317346"><i class="iconfont icon-telephone" style="font-size: 0.7rem;color:#666666;"></i></a>
+							</li>
+							<li class="secondLi waitSure">
+								<ol class="showAdressOl">
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-qidian" style="font-size: 0.7rem;color:#00a05a;"></i></a>
+										<span class="rightSpan">中国中国中国中国</span>
+									</li>
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-zhongdian" style="font-size: 0.7rem;color:#e60032;"></i></a>
+										<span class="rightSpan">中国中国中国中国</span>
+									</li>
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-jiage" style="font-size: 0.72rem;color:#f16622;"></i></a>
+										<span class="rightSpan">商家报价<label class="color">260元</label></span>
+									</li>
+								</ol>
+						   </li>
+						   	<li class="lastLi">
+									<span class="leftSpan">约<label>1086.1</label>公里</span>
+									<span class="rightSpan">查看路线<a class="rightIcon" href="#"><i class="iconfont icon-xiangyou" style="font-size: 0.5rem;color:#FFFFFF;"></i></a></span>
+							</li>
+						</ul>
+					</div>    
+					<div class="preloaderUp preloaderUp01"><img src="img/refresh.gif" /> <span>上拉加载...</span> </div>	
+				</div>
+			</div>
+	<!--拼货订单--已接单-->
+	<div class="swiper-container swiper-container05 main01" style="clear: both;display: none;">
+				<div class="swiper-wrapper" style="position: relative;">
+					<div class="swiper-slide">
+						<ul class="orderList">
+							<li class="firstLi waitSure">
+								<span class="leftSpan">2017-02-10 15:30</span>
+								<span class="rightSpan">未支付&nbsp;<a class="rightIcon" href="#"><i class="iconfont icon-xiangyou" style="font-size: 0.5rem;color:#BFBFBF;"></i></a></span>
+							</li>
+							<li class="threeLi">
+								<div class="leftImg">
+									<img src="img/icon.jpg" />
+								</div>
+								<div class="centerContent">
+									<span>商家一&nbsp;&nbsp;<a class="iconX" href="#"><i class="iconfont icon-xingxing" style="font-size: 0.5rem;color:#fed10b;"></i>&nbsp;4.8</a><label>&nbsp;1698单</label></span>
+									<label class="showCarList">汽车配件、二手车</label>
+							
+								</div>
+								<a class="rightIcon" href="tel:15221317346"><i class="iconfont icon-telephone" style="font-size: 0.7rem;color:#666666;"></i></a>
+							</li>
+							<li class="secondLi">
+								<ol class="showAdressOl">
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-qidian" style="font-size: 0.7rem;color:#00a05a;"></i></a>
+										<span class="rightSpan">中国中国中国中国</span>
+									</li>
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-zhongdian" style="font-size: 0.7rem;color:#e60032;"></i></a>
+										<span class="rightSpan">中国中国中国中国</span>
+									</li>
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-jiage" style="font-size: 0.72rem;color:#f16622;"></i></a>
+										<span class="rightSpan">商家报价<label class="color">260元</label></span>
+									</li>
+								</ol>
+						   </li>
+						   	<li class="lastLi">
+									<span class="leftSpan">约<label>1086.1</label>公里</span>
+									<span class="rightSpan">查看路线<a class="rightIcon" href="#"><i class="iconfont icon-xiangyou" style="font-size: 0.5rem;color:#FFFFFF;"></i></a></span>
+							</li>
+						</ul>
+					</div>   
+					<div class="swiper-slide">
+						<ul class="orderList">
+							<li class="firstLi simCarInform01">
+								<span class="leftSpan">2017-02-10 15:30</span>
+								<span class="rightSpan">已支付&nbsp;<a class="rightIcon" href="#"><i class="iconfont icon-xiangyou" style="font-size: 0.5rem;color:#BFBFBF;"></i></a></span>
+							</li>
+							<li class="threeLi">
+								<div class="leftImg">
+									<img src="img/icon.jpg" />
+								</div>
+								<div class="centerContent">
+									<span>商家一&nbsp;&nbsp;<a class="iconX" href="#"><i class="iconfont icon-xingxing" style="font-size: 0.5rem;color:#fed10b;"></i>&nbsp;4.8</a><label>&nbsp;1698单</label></span>
+									<label class="showCarList">汽车配件、二手车</label>
+							
+								</div>
+								<a class="rightIcon" href="tel:15221317346"><i class="iconfont icon-telephone" style="font-size: 0.7rem;color:#666666;"></i></a>
+							</li>
+							<li class="secondLi">
+								<ol class="showAdressOl">
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-qidian" style="font-size: 0.7rem;color:#00a05a;"></i></a>
+										<span class="rightSpan">中国中国中国中国</span>
+									</li>
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-zhongdian" style="font-size: 0.7rem;color:#e60032;"></i></a>
+										<span class="rightSpan">中国中国中国中国</span>
+									</li>
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-jiage" style="font-size: 0.72rem;color:#f16622;"></i></a>
+										<span class="rightSpan">商家报价<label class="color">260元</label></span>
+									</li>
+								</ol>
+						   </li>
+						   	<li class="lastLi">
+									<span class="leftSpan">约<label>1086.1</label>公里</span>
+									<span class="rightSpan">查看路线<a class="rightIcon" href="#"><i class="iconfont icon-xiangyou" style="font-size: 0.5rem;color:#FFFFFF;"></i></a></span>
+							</li>
+							<li class="aleadyPayLi">
+								<span>支付费用：<label class="color">￥260</label></span>
+								<a href="#" class="pickGoodBtn simButton">确认提货</a>
+							</li>
+						</ul>
+					</div>  
+					<div class="swiper-slide">
+						<ul class="orderList">
+							<li class="firstLi simCarInform01">
+								<span class="leftSpan">2017-02-10 15:30</span>
+								<span class="rightSpan">已配送&nbsp;<a class="rightIcon" href="#"><i class="iconfont icon-xiangyou" style="font-size: 0.5rem;color:#BFBFBF;"></i></a></span>
+							</li>
+							<li class="threeLi">
+								<div class="leftImg">
+									<img src="img/icon.jpg" />
+								</div>
+								<div class="centerContent">
+									<span>商家一&nbsp;&nbsp;<a class="iconX" href="#"><i class="iconfont icon-xingxing" style="font-size: 0.5rem;color:#fed10b;"></i>&nbsp;4.8</a><label>&nbsp;1698单</label></span>
+									<label class="showCarList">汽车配件、二手车</label>
+							
+								</div>
+								<a class="rightIcon" href="tel:15221317346"><i class="iconfont icon-telephone" style="font-size: 0.7rem;color:#666666;"></i></a>
+							</li>
+							<li class="secondLi">
+								<ol class="showAdressOl">
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-qidian" style="font-size: 0.7rem;color:#00a05a;"></i></a>
+										<span class="rightSpan">中国中国中国中国</span>
+									</li>
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-zhongdian" style="font-size: 0.7rem;color:#e60032;"></i></a>
+										<span class="rightSpan">中国中国中国中国</span>
+									</li>
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-jiage" style="font-size: 0.72rem;color:#f16622;"></i></a>
+										<span class="rightSpan">商家报价<label class="color">260元</label></span>
+									</li>
+								</ol>
+						   </li>
+						   	<li class="lastLi">
+									<span class="leftSpan">约<label>1086.1</label>公里</span>
+									<span class="rightSpan">查看路线<a class="rightIcon" href="#"><i class="iconfont icon-xiangyou" style="font-size: 0.5rem;color:#FFFFFF;"></i></a></span>
+							</li>
+							<li class="aleadyPayLi">
+								<span>支付费用：<label class="color">￥260</label></span>
+								<a href="#" class="shouHuoBtn simButton">确认送达</a>
+							</li>
+						</ul>
+					</div>   
+					<div class="preloaderUp preloaderUp01"><img src="img/refresh.gif" /> <span>上拉加载...</span> </div>	
+				</div>
+			</div>
+	<!--拼货订单--已完成-->
+	<div class="swiper-container swiper-container06 main01" style="clear: both;display: none;">
+				<div class="swiper-wrapper" style="position: relative;">
+				<div class="swiper-slide">
+						<ul class="orderList">
+							<li class="firstLi completed">
+								<span class="leftSpan">2017-02-10 15:30</span>
+								<span class="rightSpan">已送达&nbsp;<a class="rightIcon" href="#"><i class="iconfont icon-xiangyou" style="font-size: 0.5rem;color:#BFBFBF;"></i></a></span>
+							</li>
+							<li class="threeLi">
+								<div class="leftImg">
+									<img src="img/icon.jpg" />
+								</div>
+								<div class="centerContent">
+									<span>商家一&nbsp;&nbsp;<a class="iconX" href="#"><i class="iconfont icon-xingxing" style="font-size: 0.5rem;color:#fed10b;"></i>&nbsp;4.8</a><label>&nbsp;1698单</label></span>
+									<label class="showCarList">汽车配件、二手车</label>
+							
+								</div>
+								<a class="rightIcon" href="tel:15221317346"><i class="iconfont icon-telephone" style="font-size: 0.7rem;color:#666666;"></i></a>
+							</li>
+							<li class="secondLi">
+								<ol class="showAdressOl">
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-qidian" style="font-size: 0.7rem;color:#00a05a;"></i></a>
+										<span class="rightSpan">中国中国中国中国</span>
+									</li>
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-zhongdian" style="font-size: 0.7rem;color:#e60032;"></i></a>
+										<span class="rightSpan">中国中国中国中国</span>
+									</li>
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-jiage" style="font-size: 0.72rem;color:#f16622;"></i></a>
+										<span class="rightSpan">商家报价<label class="color">260元</label></span>
+									</li>
+								</ol>
+						   </li>
+						   <li class="aleadyPayLi">
+								<span>支付费用：<label class="color">￥260</label></span>
+								<!--<a href="#" class="merchantsBtn simButton">评价商家</a>-->
+							</li>
+						</ul>
+					</div>    
+					<div class="swiper-slide">
+						<ul class="orderList">
+							<li class="firstLi completed">
+								<span class="leftSpan">2017-02-10 15:30</span>
+								<span class="rightSpan">已完成&nbsp;<a class="rightIcon" href="#"><i class="iconfont icon-xiangyou" style="font-size: 0.5rem;color:#BFBFBF;"></i></a></span>
+							</li>
+							<li class="threeLi">
+								<div class="leftImg">
+									<img src="img/icon.jpg" />
+								</div>
+								<div class="centerContent">
+									<span>商家一&nbsp;&nbsp;<a class="iconX" href="#"><i class="iconfont icon-xingxing" style="font-size: 0.5rem;color:#fed10b;"></i>&nbsp;4.8</a><label>&nbsp;1698单</label></span>
+									<label class="showCarList">汽车配件、二手车</label>
+							
+								</div>
+								<div class="rightContent">
+									<a class="smsIcon" href="tel:15221317346"><i class="iconfont icon-gantanhao" style="font-size: 0.6rem;color:#666666;"></i></a>
+									<a class="rightIcon" href="tel:15221317346"><i class="iconfont icon-telephone" style="font-size: 0.7rem;color:#666666;"></i></a>
+								</div>
+							</li>
+							<li class="secondLi">
+								<ol class="showAdressOl">
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-qidian" style="font-size: 0.7rem;color:#00a05a;"></i></a>
+										<span class="rightSpan">中国中国中国中国</span>
+									</li>
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-zhongdian" style="font-size: 0.7rem;color:#e60032;"></i></a>
+										<span class="rightSpan">中国中国中国中国</span>
+									</li>
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-jiage" style="font-size: 0.72rem;color:#f16622;"></i></a>
+										<span class="rightSpan">商家报价<label class="color">260元</label></span>
+									</li>
+								</ol>
+						   </li>
+							<li class="aleadyPayLi">
+								<span>支付费用：<label class="color">￥260</label></span>
+								<a href="#" class="merchantsBtn simButton">评价商家</a>
+							</li>
+						</ul>
+					</div>      
+					<div class="swiper-slide">
+						<ul class="orderList">
+							<li class="firstLi completed">
+								<span class="leftSpan">2017-02-10 15:30</span>
+								<span class="rightSpan">已完成&nbsp;<a class="rightIcon" href="#"><i class="iconfont icon-xiangyou" style="font-size: 0.5rem;color:#BFBFBF;"></i></a></span>
+							</li>
+							<li class="threeLi">
+								<div class="leftImg">
+									<img src="img/icon.jpg" />
+								</div>
+								<div class="centerContent">
+									<span>商家一&nbsp;&nbsp;<a class="iconX" href="#"><i class="iconfont icon-xingxing" style="font-size: 0.5rem;color:#fed10b;"></i>&nbsp;4.8</a><label>&nbsp;1698单</label></span>
+									<label class="showCarList">汽车配件、二手车</label>
+							
+								</div>
+								<div class="rightContent">
+									<a class="smsIcon" href="tel:15221317346"><i class="iconfont icon-gantanhao" style="font-size: 0.6rem;color:#666666;"></i></a>
+									<a class="rightIcon" href="tel:15221317346"><i class="iconfont icon-telephone" style="font-size: 0.7rem;color:#666666;"></i></a>
+								</div>
+							</li>
+							<li class="secondLi">
+								<ol class="showAdressOl">
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-qidian" style="font-size: 0.7rem;color:#00a05a;"></i></a>
+										<span class="rightSpan">中国中国中国中国</span>
+									</li>
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-zhongdian" style="font-size: 0.7rem;color:#e60032;"></i></a>
+										<span class="rightSpan">中国中国中国中国</span>
+									</li>
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-jiage" style="font-size: 0.72rem;color:#f16622;"></i></a>
+										<span class="rightSpan">商家报价<label class="color">260元</label></span>
+									</li>
+								</ol>
+						   </li>
+							<li class="aleadyPayLi">
+								<span>支付费用：<label class="color">￥260</label></span>
+								<!--<a href="#" class="merchantsBtn simButton">评价商家</a>-->
+							</li>
+							<li class="evalLi">我对商家的评价</li>
+							<li class="evalListLi">
+								<ol>
+									<li><a class="starIcon" href="#"><i class="iconfont icon-pingfenwujiaoxing1 select" style="font-size: 0.8rem;"></i></a></li>
+									<li><a class="starIcon" href="#"><i class="iconfont icon-pingfenwujiaoxing1 select" style="font-size: 0.8rem;"></i></a></li>
+									<li><a class="starIcon" href="#"><i class="iconfont icon-pingfenwujiaoxing1 noSelect" style="font-size: 0.8rem;"></i></a></li>
+									<li><a class="starIcon" href="#"><i class="iconfont icon-pingfenwujiaoxing1 noSelect" style="font-size: 0.8rem;"></i></a></li>
+									<li><a class="starIcon" href="#"><i class="iconfont icon-pingfenwujiaoxing1 noSelect" style="font-size: 0.8rem;"></i></a></li>
+								</ol>
+							</li>
+						</ul>
+					</div>   
+					 <div class="swiper-slide">
+						<ul class="orderList">
+							<li class="firstLi completed">
+								<span class="leftSpan">2017-02-10 15:30</span>
+								<span class="rightSpan">已取消&nbsp;<a class="rightIcon" href="#"><i class="iconfont icon-xiangyou" style="font-size: 0.5rem;color:#BFBFBF;"></i></a></span>
+							</li>
+							<li class="threeLi">
+								<div class="leftImg">
+									<img src="img/icon.jpg" />
+								</div>
+								<div class="centerContent">
+									<span>商家一&nbsp;&nbsp;<a class="iconX" href="#"><i class="iconfont icon-xingxing" style="font-size: 0.5rem;color:#fed10b;"></i>&nbsp;4.8</a><label>&nbsp;1698单</label></span>
+									<label class="showCarList">汽车配件、二手车</label>
+							
+								</div>
+								<a class="rightIcon" href="tel:15221317346"><i class="iconfont icon-telephone" style="font-size: 0.7rem;color:#666666;"></i></a>
+							</li>
+							<li class="secondLi">
+								<ol class="showAdressOl">
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-qidian" style="font-size: 0.7rem;color:#00a05a;"></i></a>
+										<span class="rightSpan">中国中国中国中国</span>
+									</li>
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-zhongdian" style="font-size: 0.7rem;color:#e60032;"></i></a>
+										<span class="rightSpan">中国中国中国中国</span>
+									</li>
+									<li>
+										<a class="leftIcon" href="#"><i class="iconfont icon-jiage" style="font-size: 0.72rem;color:#f16622;"></i></a>
+										<span class="rightSpan">商家报价<label class="color">260元</label></span>
+									</li>
+								</ol>
+						   </li>
+						</ul>
+					</div>   
+					<div class="preloaderUp preloaderUp01"><img src="img/refresh.gif" /> <span>上拉加载...</span> </div>	
+				</div>
+			</div>
+    	    <!--已完成-一已评价-->
+		  <div class="popup01" style="display: none;">
+				<h3>评价</h3>
+				<div class="remindsss">
+					<ol>
+			  			<li><a class="qiIcon" href="javascript:;"><i class="iconfont icon-iconfontxingxing checkedIcon"></i></a></li>
+			  			<li><a class="qiIcon" href="javascript:;"><i class="iconfont icon-iconfontxingxing checkedIcon" ></i></a></li>
+			  			<li><a class="qiIcon" href="javascript:;"><i class="iconfont icon-iconfontxingxing notcheckedIcon" ></i></a></li>
+			  			<li><a class="qiIcon" href="javascript:;"><i class="iconfont icon-iconfontxingxing notcheckedIcon" ></i></a></li>
+			  			<li><a class="qiIcon" href="javascript:;"><i class="iconfont icon-iconfontxingxing notcheckedIcon"></i></a></li>
+					</ol>
+					<p>不满意 , 比较差</p>
+					<a href="javascript:;" class="knowBtn">知道了</a>
+			    </div>
+		  </div>
+		 
+		  <!--已完成-未评价-->
+		  <div class="poppup02">
+		  	<div class="headPop">
+		  		<a class="closePop02" href="#"><i class="iconfont icon-x5" style="font-size: 0.8rem;color:#D7D7D7;"></i></a>
+		  		<h3>评价</h3>
+		  	</div>
+		  	<div class="centerPop">
+		  			<ol>
+			  			<li><a class="qiIcon" href="javascript:;"><i class="iconfont icon-iconfontxingxing checkedIcon  simI"></i></a></li>
+			  			<li><a class="qiIcon" href="javascript:;"><i class="iconfont icon-iconfontxingxing checkedIcon  simI" ></i></a></li>
+			  			<li><a class="qiIcon" href="javascript:;"><i class="iconfont icon-iconfontxingxing notcheckedIcon simI" ></i></a></li>
+			  			<li><a class="qiIcon" href="javascript:;"><i class="iconfont icon-iconfontxingxing notcheckedIcon simI" ></i></a></li>
+			  			<li><a class="qiIcon" href="javascript:;"><i class="iconfont icon-iconfontxingxing notcheckedIcon simI"></i></a></li>
+					</ol>
+					<p>您的评价会让司机做得更好</p>
+		  	</div>
+		  	<div class="bottomPop">
+		  		<h3>五星服务标准</h3>
+		  			<ol>
+			  			<li><a class="qiIcon" href="javascript:;">准时接送货物</a></li>
+			  			<li><a class="qiIcon" href="javascript:;">准时接送货物</a></li>
+			  			<li><a class="qiIcon" href="javascript:;">准时接送货物</a></li>
+			  			<li><a class="qiIcon" href="javascript:;">准时接送货物</a></li>
+					</ol>
+		  	</div>
+		  </div>
+		    <!--已完成-评价中-->
+		  <div class="poppup03">
+		  	<div class="headPop">
+		  		<a class="closePop03" href="#"><i class="iconfont icon-x5" style="font-size: 0.8rem;color:#D7D7D7;"></i></a>
+		  		<h3>评价</h3>
+		  	</div>
+		  	<div class="centerPop">
+		  			<ol>
+			  			<li><a class="qiIcon" href="javascript:;"><i class="iconfont icon-iconfontxingxing checkedIcon simI"></i></a></li>
+			  			<li><a class="qiIcon" href="javascript:;"><i class="iconfont icon-iconfontxingxing checkedIcon simI" ></i></a></li>
+			  			<li><a class="qiIcon" href="javascript:;"><i class="iconfont icon-iconfontxingxing notcheckedIcon simI" ></i></a></li>
+			  			<li><a class="qiIcon" href="javascript:;"><i class="iconfont icon-iconfontxingxing notcheckedIcon simI" ></i></a></li>
+			  			<li><a class="qiIcon" href="javascript:;"><i class="iconfont icon-iconfontxingxing notcheckedIcon simI"></i></a></li>
+					</ol>
+					<p class="notP"><span>非常不满意，各方面都很差</span></p>
+					<p>推出不足</p>
+		  	</div>
+		  	<div class="bottomPop">
+		  			<ol>
+			  			<li><a class="qiIcon" href="javascript:;">道路不熟</a></li>
+			  			<li><a class="qiIcon" href="javascript:;">危险驾驶</a></li>
+			  			<li><a class="qiIcon" href="javascript:;">车太破</a></li>
+			  			<li><a class="qiIcon" href="javascript:;">车太脏</a></li>
+			  			<li><a class="qiIcon" href="javascript:;">服务态度恶劣</a></li>
+			  			<li><a class="qiIcon" href="javascript:;">其他,请补充</a></li>
+					</ol>
+					<input type="text" maxlength="50" class="otherInput" placeholder="其他想说的(将匿名并延迟告知司机)"/>
+					<textarea placeholder="其他想说的(将匿名并延迟告知司机)" class="on textArea" maxlength="50" onkeyup="size(this);"></textarea>
+					<div class="digital"><span id="span">0</span>/50</div>
+					<button  class="niNameBtn" disabled="disabled">匿名提交</button>
+		  	</div>
+		  	
+		  </div>
+		    <!--已完成-评价以已经完成-->
+		    <div class="alreadyPoppup04">
+		    	<div class="headPop">
+		  		<a class="closePop04" href="#"><i class="iconfont icon-x5" style="font-size: 0.8rem;color:#D7D7D7;"></i></a>
+		  			<h3>评价</h3>
+		  		</div>
+		  		<div class="centerPop">
+		  			<a href="javascript:;"><i class="iconfont icon-wancheng" style="font-size: 1.5rem;color:#ffeb43;"></i></a>
+		  			<p>评价完成</p>
+		  		</div>
+		    </div>
+		<div class="black_overlay" style="display: none;"></div>
+<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="swiper/swiper.min.js" type="text/javascript" charset="utf-8"></script> 
+<script type="text/javascript" src="js/index.js" ></script>
+</body>
+</html>
