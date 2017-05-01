@@ -44,7 +44,7 @@ $(".header_right01").click(function(){
 	$(".showTab01").hide();
 	$(".showTab02 li a").removeClass("activeAs");
 	$(".showTab02 li a").eq(0).addClass("activeAs");
-	var my04Content ='<div class="swiper-slide"><ul class="orderList"><li class="firstLi"><span class="leftSpan">2017-02-10 15:30</span><span class="rightSpan">待确定&nbsp;<a class="rightIcon" href="#"><i class="iconfont icon-xiangyou" style="font-size: 0.5rem;color:#BFBFBF;"></i></a></span></li><li class="secondLi"><ol class="showAdressOl"><li><a class="leftIcon" href="#"><i class="iconfont icon-qidian" style="font-size: 0.7rem;color:#00a05a;"></i></a><span class="rightSpan">上海上海市闵行区银宵大厦</span></li><li><a class="leftIcon" href="#"><i class="iconfont icon-zhongdian" style="font-size: 0.7rem;color:#e60032;"></i></a><span class="rightSpan">上海上海市闵行区银宵大厦</span></li></ol></li></ul></div>';
+	var my04Content ='<div class="swiper-slide"><ul class="orderList"><li class="firstLi"><span class="leftSpan">2017-02-10 15:30</span><span class="rightSpan">待确定&nbsp;<a class="rightIcon" href="#"><i class="iconfont icon-xiangyou" style="font-size: 0.5rem;color:#BFBFBF;"></i></a></span></li><li class="secondLi"><ol class="showAdressOl"><li><a class="leftIcon" href="#"><i class="iconfont icon-qidian" style="font-size: 0.7rem;color:#00a05a;"></i></a><span class="rightSpan">中国中国中国中国加</span></li><li><a class="leftIcon" href="#"><i class="iconfont icon-zhongdian" style="font-size: 0.7rem;color:#e60032;"></i></a><span class="rightSpan">中国中国中国中国</span></li></ol></li></ul></div>';
 var mySwiper04 = new Swiper('.swiper-container04',{
 		      direction: 'vertical',
 		      slidesPerView: 'auto',
@@ -88,7 +88,7 @@ $(".showTab01 li a").each(function(index){
 		$(".showTab01 li a").removeClass("activeAs");
 		$(this).addClass("activeAs");
 		if(index == 1){
-			 var sss = '<div class="swiper-slide"><ul class="orderList"><li class="firstLi"><span class="leftSpan">2017-02-10 15:30</span><span class="rightSpan">待接单&nbsp;<a class="rightIcon" href="#"><i class="iconfont icon-xiangyou" style="font-size: 0.5rem;color:#BFBFBF;"></i></a></span></li><li class="secondLi"><ol class="showAdressOl"><li><a class="leftIcon" href="#"><i class="iconfont icon-qidian" style="font-size: 0.7rem;color:#00a05a;"></i></a><span class="rightSpan">上海上海市闵行区银宵大厦</span></li><li><a class="leftIcon" href="#"><i class="iconfont icon-zhongdian" style="font-size: 0.7rem;color:#e60032;"></i></a><span class="rightSpan">上海上海市闵行区银宵大厦</span></li></ol></li></ul></div>';
+			 var sss = '<div class="swiper-slide"><ul class="orderList"><li class="firstLi"><span class="leftSpan">2017-02-10 15:30</span><span class="rightSpan">待接单&nbsp;<a class="rightIcon" href="#"><i class="iconfont icon-xiangyou" style="font-size: 0.5rem;color:#BFBFBF;"></i></a></span></li><li class="secondLi"><ol class="showAdressOl"><li><a class="leftIcon" href="#"><i class="iconfont icon-qidian" style="font-size: 0.7rem;color:#00a05a;"></i></a><span class="rightSpan">中国中国中国中国</span></li><li><a class="leftIcon" href="#"><i class="iconfont icon-zhongdian" style="font-size: 0.7rem;color:#e60032;"></i></a><span class="rightSpan">中国中国中国中国</span></li></ol></li></ul></div>';
 			 var mySwiper02 = new Swiper('.swiper-container02',{
 		      direction: 'vertical',
 		      slidesPerView: 'auto',
@@ -124,7 +124,7 @@ $(".showTab01 li a").each(function(index){
 			    }
 		  })
 		}else if(index == 2){
-			 var sss ='<div class="swiper-slide"><ul class="orderList"><li class="firstLi"><span class="leftSpan">2017-02-10 15:30</span><span class="rightSpan">待接单&nbsp;<a class="rightIcon" href="#"><i class="iconfont icon-xiangyou" style="font-size: 0.5rem;color:#BFBFBF;"></i></a></span></li><li class="secondLi"><ol class="showAdressOl"><li><a class="leftIcon" href="#"><i class="iconfont icon-qidian" style="font-size: 0.7rem;color:#00a05a;"></i></a><span class="rightSpan">上海上海市闵行区银宵大厦</span></li><li><a class="leftIcon" href="#"><i class="iconfont icon-zhongdian" style="font-size: 0.7rem;color:#e60032;"></i></a><span class="rightSpan">上海上海市闵行区银宵大厦</span></li></ol></li></ul></div>';
+			 var sss ='<div class="swiper-slide"><ul class="orderList"><li class="firstLi"><span class="leftSpan">2017-02-10 15:30</span><span class="rightSpan">待接单&nbsp;<a class="rightIcon" href="#"><i class="iconfont icon-xiangyou" style="font-size: 0.5rem;color:#BFBFBF;"></i></a></span></li><li class="secondLi"><ol class="showAdressOl"><li><a class="leftIcon" href="#"><i class="iconfont icon-qidian" style="font-size: 0.7rem;color:#00a05a;"></i></a><span class="rightSpan">中国中国中国中国</span></li><li><a class="leftIcon" href="#"><i class="iconfont icon-zhongdian" style="font-size: 0.7rem;color:#e60032;"></i></a><span class="rightSpan">中国中国中国中国</span></li></ol></li></ul></div>';
 			 var mySwiper03 = new Swiper('.swiper-container03',{
 		      direction: 'vertical',
 		      slidesPerView: 'auto',
@@ -169,7 +169,7 @@ $(".showTab02 li a").each(function(index){
 		$(".showTab02 li a").removeClass("activeAs");
 		$(this).addClass("activeAs");
 		if(index == 1){
-			 var sss ='<div class="swiper-slide"><ul class="orderList"><li class="firstLi"><span class="leftSpan">2017-02-10 15:30</span><span class="rightSpan">待接单&nbsp;<a class="rightIcon" href="#"><i class="iconfont icon-xiangyou" style="font-size: 0.5rem;color:#BFBFBF;"></i></a></span></li><li class="secondLi"><ol class="showAdressOl"><li><a class="leftIcon" href="#"><i class="iconfont icon-qidian" style="font-size: 0.7rem;color:#00a05a;"></i></a><span class="rightSpan">上海上海市闵行区银宵大厦</span></li><li><a class="leftIcon" href="#"><i class="iconfont icon-zhongdian" style="font-size: 0.7rem;color:#e60032;"></i></a><span class="rightSpan">上海上海市闵行区银宵大厦</span></li></ol></li></ul></div>';
+			 var sss ='<div class="swiper-slide"><ul class="orderList"><li class="firstLi"><span class="leftSpan">2017-02-10 15:30</span><span class="rightSpan">待接单&nbsp;<a class="rightIcon" href="#"><i class="iconfont icon-xiangyou" style="font-size: 0.5rem;color:#BFBFBF;"></i></a></span></li><li class="secondLi"><ol class="showAdressOl"><li><a class="leftIcon" href="#"><i class="iconfont icon-qidian" style="font-size: 0.7rem;color:#00a05a;"></i></a><span class="rightSpan">中国中国中国中国</span></li><li><a class="leftIcon" href="#"><i class="iconfont icon-zhongdian" style="font-size: 0.7rem;color:#e60032;"></i></a><span class="rightSpan">中国中国中国中国</span></li></ol></li></ul></div>';
 			 var mySwiper05 = new Swiper('.swiper-container05',{
 		      direction: 'vertical',
 		      slidesPerView: 'auto',
@@ -205,7 +205,7 @@ $(".showTab02 li a").each(function(index){
 			    }
 		  })
 		}else if(index == 2){
-			 var sss ='<div class="swiper-slide"><ul class="orderList"><li class="firstLi"><span class="leftSpan">2017-02-10 15:30</span><span class="rightSpan">待接单&nbsp;<a class="rightIcon" href="#"><i class="iconfont icon-xiangyou" style="font-size: 0.5rem;color:#BFBFBF;"></i></a></span></li><li class="secondLi"><ol class="showAdressOl"><li><a class="leftIcon" href="#"><i class="iconfont icon-qidian" style="font-size: 0.7rem;color:#00a05a;"></i></a><span class="rightSpan">上海上海市闵行区银宵大厦</span></li><li><a class="leftIcon" href="#"><i class="iconfont icon-zhongdian" style="font-size: 0.7rem;color:#e60032;"></i></a><span class="rightSpan">上海上海市闵行区银宵大厦</span></li></ol></li></ul></div>';
+			 var sss ='<div class="swiper-slide"><ul class="orderList"><li class="firstLi"><span class="leftSpan">2017-02-10 15:30</span><span class="rightSpan">待接单&nbsp;<a class="rightIcon" href="#"><i class="iconfont icon-xiangyou" style="font-size: 0.5rem;color:#BFBFBF;"></i></a></span></li><li class="secondLi"><ol class="showAdressOl"><li><a class="leftIcon" href="#"><i class="iconfont icon-qidian" style="font-size: 0.7rem;color:#00a05a;"></i></a><span class="rightSpan">中国中国中国中国</span></li><li><a class="leftIcon" href="#"><i class="iconfont icon-zhongdian" style="font-size: 0.7rem;color:#e60032;"></i></a><span class="rightSpan">中国中国中国中国</span></li></ol></li></ul></div>';
 			 var mySwiper06 = new Swiper('.swiper-container06',{
 		      direction: 'vertical',
 		      slidesPerView: 'auto',
@@ -244,7 +244,7 @@ $(".showTab02 li a").each(function(index){
 	})
 })
 
-var my01Content = '<div class="swiper-slide"><ul class="orderList"><li class="firstLi"><span class="leftSpan">2017-02-10 15:30</span><span class="rightSpan">待接单&nbsp;<a class="rightIcon" href="#"><i class="iconfont icon-xiangyou" style="font-size: 0.5rem;color:#BFBFBF;"></i></a></span></li><li class="secondLi"><ol class="showAdressOl"><li><a class="leftIcon" href="#"><i class="iconfont icon-qidian" style="font-size: 0.7rem;color:#00a05a;"></i></a><span class="rightSpan">上海上海市闵行区银宵大厦</span></li><li><a class="leftIcon" href="#"><i class="iconfont icon-zhongdian" style="font-size: 0.7rem;color:#e60032;"></i></a><span class="rightSpan">上海上海市闵行区银宵大厦</span></li></ol></li></ul></div>';
+var my01Content = '<div class="swiper-slide"><ul class="orderList"><li class="firstLi"><span class="leftSpan">2017-02-10 15:30</span><span class="rightSpan">待接单&nbsp;<a class="rightIcon" href="#"><i class="iconfont icon-xiangyou" style="font-size: 0.5rem;color:#BFBFBF;"></i></a></span></li><li class="secondLi"><ol class="showAdressOl"><li><a class="leftIcon" href="#"><i class="iconfont icon-qidian" style="font-size: 0.7rem;color:#00a05a;"></i></a><span class="rightSpan">中国中国中国中国</span></li><li><a class="leftIcon" href="#"><i class="iconfont icon-zhongdian" style="font-size: 0.7rem;color:#e60032;"></i></a><span class="rightSpan">中国中国中国中国</span></li></ol></li></ul></div>';
   var mySwiper01 = new Swiper('.swiper-container01',{
       direction: 'vertical',
       slidesPerView: 'auto',
