@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+    <style type="text/css" media="screen">
+    	.showClass{width: 200px;height: 100px;background: red;margin-top: 10px}
+    </style>
+</head>
+<body>
+    <div>
+   		<form>
+		  <div><input type="text" name="a" value="1" id="a" /></div>
+		  <div><input type="text" name="b" value="2" id="b" /></div>
+		  <div><input type="hidden" name="c" value="3" id="c" /></div>
+		  <div>
+		    <textarea name="d" rows="8" cols="40">4</textarea>
+		  </div>
+		  <div><select name="e">
+		    <option value="5" selected="selected">5</option>
+		    <option value="6">6</option>
+		    <option value="7">7</option>
+		  </select></div>
+		  <div>
+		    <input type="checkbox" name="f" value="8" id="f" />
+		  </div>
+		  <div>
+		    <input type="submit" name="g" value="Submit" id="g" />
+		  </div>
+		</form>
+    </div>
+    <div class="showClass" id="showClass"></div>
+    <script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+    	$("#g").click(function(){
+    		var d = $("form").serialize();
+    		$.post("test.php",d,function(data){
+    			var sss = '<p>dsdsdd</p>';
+    			$("#showClass").append(sss);
+    			alert(data);
+    		})	
+    })
+    </script>
+</body>
+</html>
