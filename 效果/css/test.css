@@ -1,0 +1,36 @@
+@charset "utf-8";
+table{width: 1200px;margin: 0 auto;}
+.list_tr{background: #5BC0DE;height: 30px;}
+.table-striped > tbody > tr > td, .table-striped > tbody > tr > th{
+	border: 1px solid #269ABC;
+}
+
+			.smallImg{position: relative;width:115px;height: 64px;}
+			.simBigImg{position: absolute;width: 370px;height: 270px;display: none;z-index: 99;}
+			ul li{float: left;list-style: none;}
+			/*展示图片弹框*/
+.showBigImg{display:none;width: 732px;height: 610px;border: 5px solid #53c79f;z-index: 1002;background: #fff;position: absolute;top:25%;left:35%;text-align: center;}
+.showBigImg h3,.auditImform h3,.surePop h3{height: 53px;line-height: 53px;border-bottom: 1px solid #e8e8e8;font-size: 18px;}
+.showBigImg h3 .fontH3,.surePop h3 .fontH3{margin-left: 20px;color: #686767;float: left;}
+.showBigImg h3 .closeBtn,.auditImform h3 .closeBtn01,.surePop .closeBtn02{display: block;float: right;margin-right: 20px;cursor: pointer;}
+.showBigImg .showImg{width: 658px;height: 446px;background: #0044CC;margin-left: 32px;margin-top: 28px;position: relative;}
+.showBigImg .showImgName{display:block;margin-top: 5px;font-size: 22px;color: #666666;font-weight: bold;text-decoration: none;}
+.showBigImg .prevBtn,.showBigImg .nextBtn{position:absolute;width: 50px;height: 90px;background: #717b87;opacity:0.5; -moz-opacity: 0.5;opacity:.50; filter: alpha(opacity=50);  display: block;margin-top: 200px;z-index: 99999;}
+.showBigImg .prevBtn{left: 55px;}
+.showBigImg .nextBtn{top:53px;left: 650px;}
+.showBigImg .prevBtn img,.showBigImg .nextBtn img{margin-top: 27px;}
+.showBigImg .nextBtn:hover,.showBigImg .prevBtn:hover{;opacity:1.0; -moz-opacity: 1.0;opacity:1.0; filter: alpha(opacity=100);}
+/*蒙层*/
+.black_overlay{
+   	display: none;
+     position: absolute;  
+     top: 0%;  
+     left: 0%;     
+     width: 100%;  
+     height: 100%;  
+     background-color: #000;  
+     z-index:1001;  
+     -moz-opacity: 0.5;  
+     opacity:.50;  
+     filter: alpha(opacity=50);  
+} 

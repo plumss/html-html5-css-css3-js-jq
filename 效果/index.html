@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>类似京东二级菜单</title>
+		<style type="text/css">
+			.wrapp{position: relative;width: 200px;left: 50px;top: 50px;}
+			ul{padding: 15px 0;background: #6c6669;margin: 9;list-style: none;color: #fff;border-right-width: 0;}
+			li{display: block;height: 30px;line-height: 30px;padding-left: 12px;cursor: pointer;font-size: 14px;position: relative;}
+			li.active{background: #999395;}
+			li span:hover{color: #c81623;}
+			#sub{width: 500px;position: absolute;border: 1px solid #f7f7f7;background: #F7F7F7;box-shadow: 2px 0 5px rgba(0,0,0,.3);
+			left: 200px;top: 0;box-sizing: border-box;margin: 0;padding: 10px;}
+			.subContent a{text-decoration: none;color: #666;font-size: 12px;}
+			.subContent dd a{border-left: 1px solid #e0e0e0;padding:0 10px;margin: 4px 0;}
+			.subContent dl{overflow: hidden;}
+			.subContent dt{float: left;width: 70px;font-weight: bold;position: relative;clear: left;}
+			.subContent dd{float: left;margin-left: 5px;border-top: 1px solid #E0E0E0;margin-bottom: 5px;}
+			.subContent dt i{width: 4px;height: 14px;font: 400 9px/14px consolas;margin-left: 5px;top: 5px;}
+			.none{display: none;}
+		</style>
+	</head>
+	<body>
+		<div class="wrapp" id="test">
+			<!--一级菜单-->
+			<ul>
+				<li data-id = "a"><span> 家电  / 电器</span></li>
+				<li data-id = "b"><span> 手机  / 衣服   /鞋子</span></li>
+				<li data-id = "c"><span> 手机  / 衣服   /鞋子</span></li>
+			</ul>
+			<!--二级菜单-->
+			<div id="sub" class="none">
+				<div id="a" class="subContent none">
+					<dl>
+						<dt><a href="#">家用电视<i>&gt;</i></a></dt>
+						<dd>
+							<a href="#">合资品牌</a>
+							<a href="#">国产品牌</a>
+							<a href="#">互联网品牌</a>
+						</dd>
+					</dl>
+				</div>
+				<div id="b" class="subContent none">
+					<dl>
+						<dt><a href="#">奢侈品<i>&gt;</i></a></dt>
+						<dd>
+							<a href="#">升麻</a>
+							<a href="#">宝马</a>
+							<a href="#">的老吗</a>
+						</dd>
+					</dl>
+				</div>
+				<div id="c" class="subContent none">
+					<dl>
+						<dt><a href="#">电器<i>&gt;</i></a></dt>
+						<dd>
+							<a href="#">电饭锅</a>
+							<a href="#">茶叶蛋</a>
+							<a href="#">老干妈</a>
+						</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<script src="js/jquery-1.11.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var sub = $("#sub");
+				var activeRow,activeMenu,timer;
+				var mouseInsub = false;
+				sub.on("mouseenter",function(e){
+					mouseInsub=true;
+				}).on("mouseleave",function(e){
+					mouseInsub=false;
+				})
+				$("#test").on("mouseenter",function(e){
+					sub.removeClass("none");
+				})
+				.on("mouseleave",function(e){
+					sub.addClass("none");
+					if(activeRow){
+						activeRow.removeClass("active");
+						activeRow = null;
+					}
+					if(activeMenu){
+						activeMenu.addClass("none");
+						activeMenu = null;
+					}
+				})
+				.on("mouseenter","li",function(e){
+					if(!activeRow){
+						activeRow = $(e.target).addClass("active");
+						activeMenu = $("#"+activeRow.data("id"));
+						activeMenu.removeClass("none");
+						return
+					}
+					if(timer){
+						clearTimeout(timer);
+					}
+					timer = setTimeout(function(){
+						if(mouseInsub){return}
+						activeRow.removeClass("active");
+						activeMenu.addClass("none");
+						activeRow = $(e.target);
+						activeRow.addClass("active");
+						activeMenu = $("#"+activeRow.data("id"));
+						activeMenu.removeClass("none");
+						timer = null;
+					},300)
+				})
+			})
+		</script>
+	</body>
+</html>
